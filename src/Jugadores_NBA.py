@@ -14,7 +14,7 @@ Registro= namedtuple("Registro", "Player,Team,Conference,Date,Position,Height,We
    @stype nombre del fichero de entrada -> str
    
    .....
-   
+
    @return lista de tuplas jugadores
    @rtype str'''
 
