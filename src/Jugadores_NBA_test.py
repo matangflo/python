@@ -52,7 +52,7 @@ def test_jugadores_por_temporada():             # Test de la funcion jugadores_p
     for clave in claves_ordenadas:
         print(clave,"->",dic[clave])
         
-        
+
 if __name__=="__main__":
     
 ################################################################

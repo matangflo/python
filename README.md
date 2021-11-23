@@ -32,7 +32,6 @@ El dataset esta compuesto por 9 columnas, con la siguiente descripcion:
 * **\<columna 16>**: de tipo int, representa el peso en kilogramos
 * **\<columna 17>**: de tipo boolean, representa las temporadas anteriores
 
-
 ## Tipos implementados
 import csv
 
