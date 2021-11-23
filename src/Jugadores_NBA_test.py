@@ -12,7 +12,7 @@ def mostrar_numerado(coleccion):
     i=0
     for p in coleccion:
         i=i+1
-        print (i, p)    
+        print (i, p) 
 ###############################################################
 #Funciones de test
 ###############################################################
@@ -52,7 +52,7 @@ def test_jugadores_por_temporada():             # Test de la funcion jugadores_p
     for clave in claves_ordenadas:
         print(clave,"->",dic[clave])
         
-
+        
 if __name__=="__main__":
     
 ################################################################
