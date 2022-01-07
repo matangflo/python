@@ -6,7 +6,7 @@ Created on 22 oct. 2021
 import csv
 from collections import namedtuple
 from datetime import datetime
-#import matplotlib.pyplot as plt  
+#import matplotlib.pyplot as plt   
   
 Registro= namedtuple("Registro", "Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season")
 ########################################################################################
