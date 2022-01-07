@@ -1,5 +1,5 @@
 # Proyecto del Primer Cuatrimestre Fundamentos de Programacion (Curso 2021/2022)
-Autor/a: Matias Angulo Flores; uvus: matangflo
+Autor: Matias Angulo Flores; uvus: matangflo
 
 ## Estructura de las carpetas del proyecto
 
@@ -44,6 +44,7 @@ import matplotlib.pyplot as plt
 Registro=namedtuple("Registro","Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season")
 
 ## Funciones implementadas
+
 Estas son las funciones utilizadas en el proyecto
 
 ### \<modulo 1\>
