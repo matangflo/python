@@ -49,7 +49,7 @@ def lee_jugadores(fichero):
    .....
    
    @return la lista de equipos ordenadas alfabeticamente
-   @rtype str'''
+   @rtype str''' 
 
 def calcula_equipos(jugadores):
     

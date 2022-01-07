@@ -9,7 +9,7 @@ Autor: Matias Angulo Flores; uvus: matangflo
 * **/data**: Contiene el dataset o datasets del proyecto
     * **Dataset_NBA.csv**: Este es el archivo con los datos de jugadores de la NBA
     
-## Estructura del *dataset*
+## Estructura del *dataset* 
 
 El dataset esta compuesto por 9 columnas, con la siguiente descripcion:
 
