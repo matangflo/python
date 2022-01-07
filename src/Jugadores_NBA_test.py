@@ -7,7 +7,7 @@ from Jugadores_NBA import *
 jugadores = lee_jugadores('../data/Dataset_NBA.csv')
 
 ###############################################################
-#Funciones auxiliares   
+#Funciones auxiliares    
 ###############################################################
 def mostrar_numerado(coleccion):
     i=0
