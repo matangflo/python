@@ -16,7 +16,7 @@ def mostrar_numerado(coleccion):
         print (i, p) 
         
 ###############################################################
-#Funciones de test 
+#Funciones de test  
 ###############################################################
 
 def test_lee_jugadores():                         # Test de la funcion lee_jugadores
