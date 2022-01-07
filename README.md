@@ -1,7 +1,7 @@
 # Proyecto del Primer Cuatrimestre Fundamentos de Programacion (Curso 2021/2022)
 Autor: Matias Angulo Flores; uvus: matangflo
 
-## Estructura de las carpetas del proyecto   
+## Estructura de las carpetas del proyecto 
 
 * **/src**: Contiene los diferentes modulos de Python que conforman el proyecto.
     * **Jugadores_NBA.py**: Este es el modulo principal, donde existen funciones para explotar los datos de los jugadores de NBA
