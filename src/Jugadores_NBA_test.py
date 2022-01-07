@@ -51,16 +51,50 @@ def test_jugadores_por_temporada():             # Test de la funcion jugadores_p
     claves_ordenadas =sorted(dic)
     for clave in claves_ordenadas:
         print(clave,"->",dic[clave])
-        
-        
+
+
+def test_contar_jugadores_por_edad():             # Test de la funcion contar_jugadores_por_edad
+    res = contar_jugadores_por_edad(jugadores)
+    print("Todos los jugadores distribuidos por sus edades:")
+    print(res)
+    
+    
+def test_equipo_mas_peso():             # Test de la funcion equipo_mas_peso
+    res = equipo_mas_peso(jugadores)
+    print("El equipo con mas suma de pesos es:")
+    print(res)
+    
+    
+def test_dicc_porcentaje_de_temporadas_en_liga_por_jugador():             # Test de la funcion dicc_porcentaje_de_temporadas_en_liga_por_jugador
+    res = dicc_porcentaje_de_temporadas_en_liga_por_jugador(jugadores)
+    print("Los porcentajes de cada jugador son:")
+    print(res)
+    
+    
+def test_dicc_n_joven_jugador_por_temporadas(n=1):             # Test de la funcion dicc_n_joven_jugador_por_temporadas
+    res = dicc_n_joven_jugador_por_temporadas(jugadores, n)
+    print("Los jugadores mas jovenes de cada temporada son:")
+    print(res)
+
+
+def test_grafica_peso_edad():             # Test de la funcion grafica_peso_edad
+    res = grafica_peso_edad(jugadores)
+    plt.show(res)
+
+
 if __name__=="__main__":
     
 ################################################################
 #  Programa principal
 ################################################################
-    #test_lee_jugadores()
+    test_lee_jugadores()
     #test_calcula_equipos()
     #test_sumaPeso()
     #test_edad_maxima()
     #test_jugadores_menor_edad()
-    test_jugadores_por_temporada()
+    #+test_jugadores_por_temporada()
+    #test_contar_jugadores_por_edad()
+    #test_equipo_mas_peso()
+    #test_dicc_porcentaje_de_temporadas_en_liga_por_jugador()
+    #test_dicc_n_joven_jugador_por_temporadas()
+    #grafica_peso_edad()

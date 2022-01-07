@@ -6,6 +6,8 @@ Created on 22 oct. 2021
 import csv
 from collections import namedtuple
 from datetime import datetime
+import matplotlib.pyplot as plt
+
 
 Registro= namedtuple("Registro", "Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season")
 ########################################################################################
@@ -110,7 +112,7 @@ def jugadores_menor_edad(jugadores, Last_Season=1, n=5):
    .....
    
    @return un diccionario ordenado de la temporada mas antigua hasta la mas reciente con los nombres de los jugadores que han participado en esa temporada
-   @rtype str'''
+   @rtype (int-str)'''
     
 def jugadores_por_temporada(jugadores):
     res= dict()
@@ -121,3 +123,99 @@ def jugadores_por_temporada(jugadores):
             res[r.Season]=[r.Player]
     return res
 
+########################################################################################
+'''Distribuye los jugadores por sus respectivas edades
+   @param jugadores es una lista de tuplas leidos de fichero
+   @stype Lista de jugadores(Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season)
+   -> [FrecuenciaNombre(str,str,boolean,datetime.date,str,str,int,int,int,int,str,int,str,float,int,int,boolean)]
+   
+   .....
+   
+   @return un diccionario que devuelve la cantidad de jugadores con las diferentes edades
+   @rtype int'''
+def contar_jugadores_por_edad(jugadores):
+    años = {}
+    for jug in jugadores:
+        if jug.Age not in años:
+            años[jug.Age] = 1
+        else:
+            años[jug.Age]  += 1
+    return años
+
+########################################################################################
+'''Muestra al equipo con la mayor suma de pesos
+   @param jugadores es una lista de tuplas leidos de fichero
+   @stype Lista de jugadores(Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season)
+   -> [FrecuenciaNombre(str,str,boolean,datetime.date,str,str,int,int,int,int,str,int,str,float,int,int,boolean)]
+   
+   .....
+   
+   @return una tupla con el equipo con mas suma de peso y la suma de pesos de dicho equipo
+   @rtype (str-int)'''
+def equipo_mas_peso(jugadores):
+    dicc = dict()
+    for j in jugadores:
+        clave=j.Team
+        if clave in dicc:
+            dicc[clave] += j.Weight
+        else:
+            dicc[clave] = j.Weight
+    return max(dicc.items(), key=lambda x:x[1])
+
+########################################################################################
+'''Muestra el porcentaje de cada jugador de la parte de vida que ha estado en la liga
+   @param jugadores es una lista de tuplas leidos de fichero
+   @stype Lista de jugadores(Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season)
+   -> [FrecuenciaNombre(str,str,boolean,datetime.date,str,str,int,int,int,int,str,int,str,float,int,int,boolean)]
+   
+   .....
+   
+   @return un diccionario con clave los nombres de los jugadores y valor los porcentajes de los años que ha estasdo en la liga respecto a su edad
+   @rtype (str-float)'''
+def porcentaje_de_temporadas_en_liga_por_jugador(jugadores,Player):
+    Temporadas_en_liga =0
+    Edad_tot =0
+    for j in jugadores:
+        if Player==j.Player:
+            Temporadas_en_liga += j.Seasons_in_league
+            Edad_tot += j.Age
+    return Temporadas_en_liga*100/Edad_tot
+
+def dicc_porcentaje_de_temporadas_en_liga_por_jugador(jugadores):
+    dicc= dict()
+    clave = (j.Player for j in jugadores)
+    for Player in clave:
+        dicc[Player] = porcentaje_de_temporadas_en_liga_por_jugador(jugadores,Player)
+    return dicc
+
+########################################################################################
+'''Muestra a los jugadores mas jovenes por temporada
+   @param jugadores es una lista de tuplas leidos de fichero
+   @stype Lista de jugadores(Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season)
+   -> [FrecuenciaNombre(str,str,boolean,datetime.date,str,str,int,int,int,int,str,int,str,float,int,int,boolean)]
+   
+   .....
+   
+   @return un diccionario donde las claves son las temporadas y los valores son una lista con los n jugadores de menor edad de cada temporada en forma de tupla (edad, nombre)
+   @rtype (int-str)'''
+def dicc_n_joven_jugador_por_temporadas(jugadores, n=1):
+    claves = sorted({j.Season for j in jugadores})
+    dicc = {clave: 0 for clave in claves}
+    for key in dicc:
+        dicc[key] = sorted([(j.Age, j.Player) for j in jugadores if j.Season ==key])[:n]
+    return dicc
+
+########################################################################################
+'''Muestra una grafica en funcion al peso y a la edad
+   @param jugadores es una lista de tuplas leidos de fichero
+   @stype Lista de jugadores(Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season)
+   -> [FrecuenciaNombre(str,str,boolean,datetime.date,str,str,int,int,int,int,str,int,str,float,int,int,boolean)]
+   
+   .....
+   
+   @return una grafica en funcion al peso y la edad
+   @rtype (int-int)'''
+def grafica_peso_edad(jugadores):
+    x=Weight
+    y=Age
+    plt.plot(x,y)

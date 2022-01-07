@@ -4,9 +4,8 @@ Autor/a: Matias Angulo Flores; uvus: matangflo
 ## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes modulos de Python que conforman el proyecto.
-  * **Jugadores_NBA.py**: Este es el modulo principal, donde existen funciones para explotar los datos de los jugadores de NBA
-  * **Jugadores_NBA_test.py**: Este es el modulo de pruebas, que contiene funciones de prueba para probar las funciones del modulo principal
-  * **\<modulo2.py\>**: Añade descripciones para el resto de modulos que pueda tener tu proyecto. Por ejemplo, sera conveniente tener un modulo separado con funciones genericas para dibujar graficas y/o otro con funciones genericas de conversi�n de tipos. 
+    * **Jugadores_NBA.py**: Este es el modulo principal, donde existen funciones para explotar los datos de los jugadores de NBA
+    * **Jugadores_NBA_test.py**: Este es el modulo de pruebas, que contiene funciones de prueba para probar las funciones del modulo principal
 * **/data**: Contiene el dataset o datasets del proyecto
     * **Dataset_NBA.csv**: Este es el archivo con los datos de jugadores de la NBA
     
@@ -40,6 +39,8 @@ from collections import namedtuple
 
 from datetime import datetime
 
+import matplotlib.pyplot as plt
+
 Registro=namedtuple("Registro","Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season")
 
 ## Funciones implementadas
@@ -53,6 +54,12 @@ Estas son las funciones utilizadas en el proyecto
 * **edad_maxima(jugadores)**: Calcula el jugador con mayor edad
 * **jugadores_menor_edad(jugadores, Last_Season=1, n=5)**: Calcula los jugadores con menor edad
 * **jugadores_por_temporada(jugadores)**: Calcula los jugadores de cada temporada
+* **contar_jugadores_por_edad(jugadores)**: Distribuye los jugadores por sus respectivas edades
+* **equipo_mas_peso(jugadores)**: Muestra al equipo con la mayor suma de pesos
+* **dicc_porcentaje_de_temporadas_en_liga_por_jugador(jugadores)**: Muestra el porcentaje de cada jugador de la parte de vida que ha estado en la liga
+* **dicc_n_joven_jugador_por_temporadas(jugadores, n=1)**: Muestra a los jugadores mas jovenes por temporada
+* **grafica_peso_edad(jugadores)**: Muestra una grafica en funcion al peso y a la edad
+
 
 ### \<test modulo 1\>
 
@@ -62,9 +69,8 @@ Estas son las funciones utilizadas en el proyecto
 * **test_edad_maxima()**: Test de la funcion edad_maxima
 * **test_jugadores_menor_edad(Last_Season=1, n=5)**: Test de la funcion jugadores_menor_edad
 * **test_jugadores_por_temporada()**: Test de la funcion jugadores_por_temporada
-
-### \<modulo 2\>
-
-* **<funcion 1>**: Descripción de la función 1.
-* **<funcion 2>**: Descripción de la función 2.
-* ...
+* **test_contar_jugadores_por_edad()**: Test de la funcion contar_jugadores_por_edad
+* **test_equipo_mas_peso()**: Test de la funcion equipo_mas_peso
+* **test_dicc_porcentaje_de_temporadas_en_liga_por_jugador()**: Test de la funcion dicc_porcentaje_de_temporadas_en_liga_por_jugador
+* **test_dicc_n_joven_jugador_por_temporadas(n=1)**: Test de la funcion dicc_n_joven_jugador_por_temporadas
+* **test_grafica_peso_edad()**: Test de la funcion grafica_peso_edad
