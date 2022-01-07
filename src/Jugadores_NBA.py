@@ -17,7 +17,7 @@ Registro= namedtuple("Registro", "Player,Team,Conference,Date,Position,Height,We
    .....
    
    @return lista de tuplas jugadores
-   @rtype str'''  
+   @rtype str''' 
 
 def lee_jugadores(fichero):
     jugadores=[]
