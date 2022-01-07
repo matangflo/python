@@ -7,7 +7,7 @@ import csv
 from collections import namedtuple
 from datetime import datetime
 #import matplotlib.pyplot as plt
-
+  
 Registro= namedtuple("Registro", "Player,Team,Conference,Date,Position,Height,Weight,Age,Draft_year,Seasons_in_league,Season,Season_short,Pre_draft_Team,Real_value,Height_CM,Weight_KG,Last_Season")
 ########################################################################################
 '''Lee el fichero de entrada
