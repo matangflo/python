@@ -213,7 +213,7 @@ def dicc_n_joven_jugador_por_temporadas(jugadores, n=1):
    .....
    
    @return una grafica en funcion al peso y la edad
-   @rtype (int-int)''' 
+   @rtype (int-int)'''  
 def grafica_peso_edad(jugadores):
     x=Weight
     y=Age
