@@ -13,23 +13,23 @@ Autor/a: Matias Angulo Flores; uvus: matangflo
 
 El dataset esta compuesto por 9 columnas, con la siguiente descripcion:
 
-* **\<columna 1>**: de tipo str, representa al jugador
-* **\<columna 2>**: de tipo str, representa al equipo
-* **\<columna 3>**: de tipo boolean, representa la conferencia
-* **\<columna 4>**: de tipo datetime.date, representa la fecha
-* **\<columna 5>**: de tipo str, representa la posicion
-* **\<columna 6>**: de tipo str, representa la altura del jugador
-* **\<columna 7>**: de tipo int, representa el peso del jugador
-* **\<columna 8>**: de tipo int, representa la edad del jugador
-* **\<columna 9>**: de tipo int, representa el año de entrada
-* **\<columna 10>**: de tipo int, representa las temporadas en la liga
-* **\<columna 11>**: de tipo str, representa la temporada
-* **\<columna 12>**: de tipo int, representa el año
-* **\<columna 13>**: de tipo str, representa el equipo del que proviene
-* **\<columna 14>**: de tipo float, representa el valor real
-* **\<columna 15>**: de tipo int, representa la altura en centimetros
-* **\<columna 16>**: de tipo int, representa el peso en kilogramos
-* **\<columna 17>**: de tipo boolean, representa las temporadas anteriores
+* **columna 1**: de tipo str, representa al jugador
+* **columna 2**: de tipo str, representa al equipo
+* **columna 3**: de tipo boolean, representa la conferencia
+* **columna 4**: de tipo datetime.date, representa la fecha
+* **columna 5**: de tipo str, representa la posicion
+* **columna 6**: de tipo str, representa la altura del jugador
+* **columna 7**: de tipo int, representa el peso del jugador
+* **columna 8**: de tipo int, representa la edad del jugador
+* **columna 9**: de tipo int, representa el año de entrada
+* **columna 10**: de tipo int, representa las temporadas en la liga
+* **columna 11**: de tipo str, representa la temporada
+* **columna 12**: de tipo int, representa el año
+* **columna 13**: de tipo str, representa el equipo del que proviene
+* **columna 14**: de tipo float, representa el valor real
+* **columna 15**: de tipo int, representa la altura en centimetros
+* **columna 16**: de tipo int, representa el peso en kilogramos
+* **columna 17**: de tipo boolean, representa las temporadas anteriores
 
 
 ## Tipos implementados

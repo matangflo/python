@@ -5,6 +5,7 @@ Created on 22 oct. 2021
 '''
 from Jugadores_NBA import *
 jugadores = lee_jugadores('../data/Dataset_NBA.csv')
+
 ###############################################################
 #Funciones auxiliares
 ###############################################################
@@ -13,9 +14,11 @@ def mostrar_numerado(coleccion):
     for p in coleccion:
         i=i+1
         print (i, p) 
+        
 ###############################################################
 #Funciones de test
 ###############################################################
+
 def test_lee_jugadores():                         # Test de la funcion lee_jugadores
     lista_jugadores=lee_jugadores("C:/Users/USUARIO/git/proyecto-entregable-python-matangflo/data/Dataset_NBA.csv")
     print("Hay",len (lista_jugadores), "jugadores")
