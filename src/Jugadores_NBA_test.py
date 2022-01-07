@@ -82,7 +82,7 @@ def test_dicc_n_joven_jugador_por_temporadas(n=1):             # Test de la func
 
 def test_grafica_peso_edad():             # Test de la funcion grafica_peso_edad
     res = grafica_peso_edad(jugadores)
-    plt.show(res)
+    plt.show(res) 
 
 
 if __name__=="__main__":
